@@ -794,12 +794,9 @@ impl Client {
     /// Generate the headers necessary for authentication.
     ///
     /// If the struct has Some(bearer), this will insert the bearer token in an
-    /// Authorization header. It will also set the Accept header, which must
-    /// be set on all OCI Registry request.
+    /// Authorization header.
     fn auth_headers(&self, image: &Reference) -> HeaderMap {
         let mut headers = HeaderMap::new();
-        headers.insert("Accept", "application/vnd.docker.distribution.manifest.v2+json,application/vnd.docker.distribution.manifest.list.v2+json,application/vnd.oci.image.manifest.v1+json".parse().unwrap());
-
         if let Some(token) = self.tokens.get(image.registry()) {
             headers.insert("Authorization", token.bearer_token().parse().unwrap());
         }
