@@ -53,7 +53,7 @@ kubelet = {path = "./crates/kubelet", version = "1.0.0-alpha.1", default-feature
 oci-distribution = {path = "./crates/oci-distribution", version = "0.7", default-features = false}
 regex = "1.3"
 serde = "1.0"
-tokio = {version = "1.0", features = ["macros", "rt-multi-thread", "time"]}
+tokio = {version = "1.16", features = ["macros", "rt-multi-thread", "time"]}
 tracing-subscriber = "0.2"
 wasi-provider = {path = "./crates/wasi-provider", version = "1.0.0-alpha.1", default-features = false}
 
@@ -66,7 +66,7 @@ reqwest = {version = "0.11", default-features = false}
 serde_derive = "1.0"
 serde_json = "1.0"
 tempfile = "3.2"
-tokio = {version = "1.0", features = ["macros", "rt-multi-thread", "time", "process"]}
+tokio = {version = "1.16", features = ["macros", "rt-multi-thread", "time", "process"]}
 tonic = "0.5"
 tokio-stream = { version="0.1", features = ["fs", "net"] }
 tower = { version = "0.4.2", features = ["util"] }

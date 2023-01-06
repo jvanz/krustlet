@@ -67,7 +67,7 @@ serde_yaml = "0.8"
 structopt = {version = "0.3", features = ["wrap_help"], optional = true}
 tempfile = "3.2"
 thiserror = "1.0"
-tokio = {version = "1.0", features = ["fs", "macros", "signal", "net"]}
+tokio = {version = "1.16", features = ["fs", "macros", "signal", "net"]}
 tokio-stream = {version = "0.1", features = ["fs", "net"]}
 tonic = "0.5"
 tower = {version = "0.4.2", features = ["util"]}
